@@ -1,6 +1,6 @@
 # VeniceRadio FS – Änderungen 0.4.5-R3 → 0.4.5-R4
 
-**Quellstand 31. Oktober 2026.** R4 ist derzeit ein getesteter **Quellcode-Kandidat**, kein bestätigter öffentlicher APK-Release.
+**Quellstand 31. Oktober 2026.** Die R4-Änderungen sind im Quellcode integriert und durch Java-Regressionstests geprüft. Die praktische Abnahme an unterschiedlichen Geräten läuft noch.
 
 ## Bedienoberfläche
 
@@ -28,11 +28,11 @@
 - Nicht mehr benötigte Codeelemente entfernt, Designwerte zentralisiert.
 - Java-Paket auf `org.veniceradio.fs` umbenannt; Anwendungskennung gleich geblieben, bisherige Launcher-Komponente wird als Alias bereitgestellt.
 - R4-Quellstand: `versionCode 57`, `versionName 0.4.5-R4`.
-- Laut Entwicklungsprotokoll **37/37 Java-Workflow-Schritte** bestanden, plus Stub-Kompilierung. **Ein Android-Build und reale Gerätetests sind gesondert erforderlich.**
+- Laut Entwicklungsprotokoll **37/37 Java-Workflow-Schritte** bestanden, plus Stub-Kompilierung. **Die praktische Geräteprüfung für R4 steht noch aus.**
 
 ## Nicht in R4 eingeflossen
 
 - Responsive Smartphone-Umgestaltung, Tablet-/Querformat und Mehrsprachigkeit: [0.4.6](ROADMAP-0.4.6.md).
 - Neue DLNA-Pause-/Skip-Tasten: [R5](ROADMAP-R5.md).
 
-Die vollständigen technischen Patches, internen Testprotokolle und signierten Testartefakte gehören zur **privaten** Entwicklungsumgebung und werden hier nicht veröffentlicht.
+Detaillierte Entwicklungsprotokolle, interne Testergebnisse und technische Arbeitsstände verbleiben in der **privaten** Entwicklungsumgebung.

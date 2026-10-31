@@ -14,17 +14,13 @@ Entscheidend sind **FSAPI und die vom Radio gemeldeten Fähigkeiten**, nicht die
 
 VeniceRadio FS entsteht als unabhängige Alternative für kompatible FSAPI-Radios. Ältere Venice-6.5-Geräte gehören nicht zum regulären OKTIV-Unterstützungsumfang. Der Entwicklungsstand von VeniceRadio FS bedeutet nicht, dass alle früheren UNDOK-Funktionen bereits vollständig nachgebildet wurden.
 
-## Ist R4 schon veröffentlicht?
+## Wie weit ist die Entwicklung von R4?
 
-**Nein, nicht als öffentlich bestätigte APK.** Für den R4-Quellcode wurden 37/37 Java-Workflow-Schritte dokumentiert; der signierte Android-Build und die abschließenden Tests auf echten Radios sind eigenständige nächste Schritte. Eine öffentliche APK-Verteilung ist hier nicht eingerichtet.
+Die Korrekturen sind im aktuellen R4-Quellstand integriert. Laut Entwicklungsprotokoll bestanden 37/37 Java-Workflow-Prüfschritte. Die praktische Überprüfung mit unterschiedlichen FSAPI-Radios und Smartphones ist noch nicht abgeschlossen.
 
-## Kann ich R4 über R3 installieren?
+## Wie werden vorhandene Favoriten und Senderverläufe behandelt?
 
-Die R4-Quellkonfiguration sieht **Version 0.4.5-R4, versionCode 57** und die unveränderte Android-Anwendungskennung vor. Ein Update ohne Datenverlust setzt zusätzlich voraus, dass die neue APK tatsächlich mit **demselben Signaturschlüssel** wie die bestehende Installation signiert ist. Die konkrete APK muss noch überprüft werden.
-
-## Werden meine Favoriten und Senderverläufe beim Update gelöscht?
-
-Die R4-Migration ist darauf ausgelegt, vorhandene Favoriten und Ordner zu erhalten. „Zuletzt gehört“ ist nun je Radio getrennt. Alte Verlaufseinträge, die sich keinem Radio sicher zuordnen lassen, bleiben gespeichert, werden aber nicht mehr angezeigt. Ein vollständiger Update-Test auf Geräten ist noch ausstehend.
+Die R4-Migration ist darauf ausgelegt, vorhandene Favoriten und Ordner zu erhalten. „Zuletzt gehört“ ist nun je Radio getrennt. Alte Verlaufseinträge, die sich keinem Radio sicher zuordnen lassen, bleiben gespeichert, werden aber nicht mehr angezeigt. Die Umsetzung dieser Datenübernahme muss in der laufenden Geräteprüfung bestätigt werden.
 
 ## Warum können zwei Kacheln gleich heißen?
 
@@ -42,10 +38,10 @@ DLNA-Bibliotheksnavigation, Medienauswahl und Wiedergabegrundlagen sind im Entwi
 
 Nein. Die App verwendet die vom Radio bereitgestellten FSAPI-Verzeichnisse und benötigt keinen eigenen airable-Account.
 
-## Was muss ich für einen Test bereitstellen?
+## Gibt es schon eine größere Testgruppe?
 
-Radio mit FSAPI, Android-Telefon und gemeinsames lokales Netzwerk. Besonders hilfreich sind beobachtete Abweichungen bei DAB/UKW-Modi, WLAN-Diagnose, identischen Sendernamen und Presets. Details: [Mitmachen](MITMACHEN.md).
+Nein. Die Entwicklung und Prüfung erfolgen derzeit in kleinem privatem Rahmen. Rückmeldungen weiterer interessierter Besitzer FSAPI-kompatibler Radios wären willkommen; es gibt noch keine organisierte externe Testgruppe. Hinweise zu interessanten Geräten und Prüfbereichen stehen unter [Mitmachen](MITMACHEN.md).
 
 ## Wo melde ich Fehler?
 
-Über die vom Projekt bekanntgegebenen Testkanäle beziehungsweise die öffentliche Projektkommunikation. Bitte niemals Radio-PINs, Zugangsdaten, Session-IDs oder ungekürzte private Netzwerkdaten veröffentlichen.
+Über die öffentliche Projektkommunikation, soweit dafür ein Kontaktweg genannt ist. Bitte niemals Radio-PINs, Zugangsdaten, Session-IDs oder ungekürzte private Netzwerkdaten veröffentlichen.

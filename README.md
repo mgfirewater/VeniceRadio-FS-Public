@@ -9,11 +9,11 @@ Die Software spricht die **FSAPI-Schnittstelle des Radios** an. Sie ist keine UN
 | Version | Stand |
 | --- | --- |
 | **0.4.5-R3** | Referenzstand für den Vergleich und bestehende Gerätetests |
-| **0.4.5-R4** | Quellcode-Kandidat fertiggestellt; **37/37 Java-Workflow-Prüfschritte** laut Entwicklungsprotokoll grün, Android-APK-Build und vollständiger Praxistest noch nicht bestätigt |
+| **0.4.5-R4** | Quellcode-Kandidat fertiggestellt; **37/37 Java-Workflow-Prüfschritte** laut Entwicklungsprotokoll grün. Die R4-Änderungen werden noch auf echten Radios und Smartphones überprüft |
 | **0.4.6** | Geplant: responsives Smartphone-Hochformat und schrittweise Mehrsprachigkeit |
 | **R5** | Geplant: weitere DLNA-Wiedergabesteuerung (Pause, Fortsetzen, nächster/vorheriger Titel) |
 
-**Wichtig:** Die erfolgreiche Java-Testreihe ersetzt weder einen signierten Android-Build noch den Test an echten Radios. Hier wird **keine fertige oder öffentlich downloadbare R4-APK** behauptet oder angeboten.
+**Wichtig:** Die dokumentierten Java-Tests bestätigen den Quellcode, nicht die vollständige Kompatibilität mit allen FSAPI-Radios. Die Entwicklung und Geräteprüfung erfolgen derzeit in kleinem Rahmen.
 
 ## Was VeniceRadio FS bereits im R4-Quellstand enthält
 
@@ -32,7 +32,7 @@ Die Oberfläche wurde für R4 vereinheitlicht: zentrale Kachelradien von **12 dp
 ## Orientierung
 
 - [FAQ – häufige Fragen](FAQ.md)
-- [Mitmachen und Gerätetests](MITMACHEN.md)
+- [Interesse am Projekt und an künftigen Gerätetests](MITMACHEN.md)
 - [Änderungen von R3 zu R4](AENDERUNGEN-0.4.5-R3-ZU-R4.md)
 - [R4-Status und verbleibende Prüfpunkte](ROADMAP-0.4.5-R4.md)
 - [Planung 0.4.6](ROADMAP-0.4.6.md)
@@ -41,7 +41,5 @@ Die Oberfläche wurde für R4 vereinheitlicht: zentrale Kachelradien von **12 dp
 ## Grenzen und Sicherheit
 
 VeniceRadio FS nutzt die lokale HTTP-basierte FSAPI älterer Radios und sollte nur in einem vertrauenswürdigen Netzwerk verwendet werden. Es gibt keine direkte Anbindung an eine airable-Cloud-API und keinen eigenen Musik-Streaming-Dienst. Nicht jedes Radio unterstützt DAB, UKW, Bluetooth oder dieselben Diagnoseknoten. Es werden keine herstellerspezifischen Hardware-Workarounds eingebaut; die App orientiert sich am gemeldeten Protokollumfang.
-
-**APK-Verteilung:** Test-APKs und deren Signaturverwaltung werden getrennt vom öffentlichen Dokumentationsrepository behandelt. Hier stehen keine APK-Dateien oder geheimen Zugangsdaten.
 
 **Unabhängiges Projekt:** Keine Zugehörigkeit zu Frontier Smart Technologies, UNDOK, airable, Teufel oder anderen Herstellern.

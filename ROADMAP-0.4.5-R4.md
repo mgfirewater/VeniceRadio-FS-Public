@@ -1,6 +1,6 @@
 # VeniceRadio FS 0.4.5-R4 – Implementiert und noch zu prüfen
 
-**Stand 31. Oktober 2026.** Diese Seite trennt die vorhandene R4-Implementierung von noch fehlenden Abnahmen. Sie ist **keine Behauptung eines veröffentlichten APK-Releases**.
+**Stand 31. Oktober 2026.** Diese Seite trennt den implementierten R4-Quellstand von noch ausstehenden Geräteprüfungen. Die Entwicklung läuft derzeit in kleinem privatem Rahmen.
 
 ## Im R4-Quellstand umgesetzt
 
@@ -16,7 +16,7 @@
 
 ## Für die R4-Freigabe noch offen
 
-- [ ] Signierten Android-APK-Build aus dem geprüften GitHub-Quellstand erfolgreich durchlaufen lassen, Signatur und Update über R3 prüfen
+- [ ] R4-Änderungen auf tatsächlich vorhandenen Radios und Smartphones überprüfen, einschließlich Übernahme bestehender Favoriten und Verlaufsdaten
 - [ ] Sichttest und Bediengeschwindigkeit auf realen Telefonen überprüfen, einschließlich der zweizeiligen langen Sendernamen und der Kachelgrundlinien
 - [ ] WLAN-Feldnamen und tatsächliche unterstützte FSAPI-Knoten an verschiedenen Radios bestätigen
 - [ ] DAB/UKW-Menüs und Senderidentitäten an echten Geräten überprüfen
