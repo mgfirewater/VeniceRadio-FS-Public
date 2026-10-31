@@ -2,13 +2,16 @@
 
 > **Planung / To-do:** Die folgenden Punkte sind angekündigte Entwicklungsziele, keine bereits verfügbaren Funktionen. Umfang und Reihenfolge können sich nach den Gerätetests noch ändern.
 
-## Responsives Layout
+## Responsives Layout – Schwerpunkt Smartphone-Hochformat
 
-- [ ] Bedienoberfläche an unterschiedliche Smartphone-Auflösungen und Displaygrößen anpassen.
-- [ ] Tablet-Darstellung vorsehen.
-- [ ] Querformat (Landscape/Wide-Mode) mit sinnvoll angeordneten Kacheln und Bedienelementen unterstützen.
+- [ ] Die bestehende Bedienoberfläche für Smartphones in klassischer Barrenform und **Hochformat** an unterschiedliche Auflösungen und Displaygrößen anpassen.
 - [ ] Kachelraster, sichtbare Einträge, Abstände und Schriftlängen an den verfügbaren Platz anpassen, ohne die bestehenden Designregeln (gemeinsame Grundlinien, konsistente Auswahllinien, feste Bedienelemente) aufzugeben.
-- [ ] Unterschiedliche Bildschirmgrößen und Ausrichtungen gezielt testen.
+- [ ] Unterschiedliche Smartphone-Bildschirmgrößen im Hochformat gezielt testen.
+
+### Optional – spätere Erweiterungen, nicht Voraussetzung für 4.6
+
+- [ ] Tablet-Darstellung prüfen und bei Bedarf ergänzen.
+- [ ] Querformat (Landscape/Wide-Mode) bei Bedarf mit angepasster Anordnung der Kacheln und Bedienelemente unterstützen.
 
 ## Mehrsprachigkeit
 
