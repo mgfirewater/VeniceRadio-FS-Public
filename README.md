@@ -3,7 +3,9 @@
 
 ## Geplant für Version 4.6
 
-Für die nächste Entwicklungsstufe sind eine **responsive Benutzeroberfläche** für unterschiedliche Smartphone-Größen, **Tablet- und Querformat-Unterstützung** sowie **Mehrsprachigkeit** vorgesehen. Die App soll sich dabei möglichst an der Android-Systemsprache orientieren; eine manuelle Sprachauswahl ist ebenfalls geplant.
+Im Mittelpunkt von Version 4.6 stehen eine **responsive Benutzeroberfläche für unterschiedliche Smartphone-Größen im klassischen Hochformat (Barrenform)** sowie **Mehrsprachigkeit**. Die App soll sich dabei möglichst an der Android-Systemsprache orientieren; eine manuelle Sprachauswahl ist ebenfalls geplant.
+
+**Tablet- und Querformat-Unterstützung sind optionale spätere Erweiterungen**, keine Voraussetzung für Version 4.6.
 
 Die Übersetzungen werden voraussichtlich schrittweise ergänzt. Welche Sprachen bereits in der ersten 4.6-Testversion verfügbar sind, steht noch nicht fest.
 
