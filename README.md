@@ -1,22 +1,47 @@
-# VeniceRadio-FS-Public
-Öffentliche Projektdokumentation für VeniceRadio FS – Android-Fernbedienung für FSAPI-kompatible Internetradios.
+# VeniceRadio FS
 
-## Entwicklung: 0.4.5 R3 und R4
+**Unabhängige Android-Fernbedienung für Radios mit Frontier-Silicon-/Frontier-Smart-Technologies-FSAPI.** Ziel ist, weiterhin funktionsfähige Internetradios – auch ältere Geräte mit Venice 6.5 – unabhängig von der Pflege der bisherigen UNDOK-App bedienen zu können.
 
-**0.4.5 R3** ist als Testfassung in Vorbereitung. Die Java-Deprecation-Warnung im WLAN-FSAPI-Diagnosetransport ist behoben; sie betraf die Java-URL-Erzeugung und **keine veraltete Android-WLAN-Schnittstelle**. Ein erfolgreicher Java-Test ist noch kein Ersatz für den Android-Build oder den Gerätetest.
+Die Software spricht die **FSAPI-Schnittstelle des Radios** an. Sie ist keine UNDOK-Kopie, verwendet keine proprietären UNDOK-Komponenten und ist nicht an einen Radiohersteller gebunden. Welche Funktionen verfügbar sind, bestimmt die tatsächliche FSAPI-Unterstützung des jeweiligen Radios.
 
-Für **0.4.5 R4** sind weitere geräteabhängige Prüfungen der WLAN-Diagnose und der DAB(+)-Unterstützung vorgesehen.
+## Aktueller Entwicklungsstand – 31. Oktober 2026
 
-**[To-do für 0.4.5 R4](ROADMAP-0.4.5-R4.md)**
+| Version | Stand |
+| --- | --- |
+| **0.4.5-R3** | Referenzstand für den Vergleich und bestehende Gerätetests |
+| **0.4.5-R4** | Quellcode-Kandidat fertiggestellt; **37/37 Java-Workflow-Prüfschritte** laut Entwicklungsprotokoll grün, Android-APK-Build und vollständiger Praxistest noch nicht bestätigt |
+| **0.4.6** | Geplant: responsives Smartphone-Hochformat und schrittweise Mehrsprachigkeit |
+| **R5** | Geplant: weitere DLNA-Wiedergabesteuerung (Pause, Fortsetzen, nächster/vorheriger Titel) |
 
-## Geplant für Version 0.4.6
+**Wichtig:** Die erfolgreiche Java-Testreihe ersetzt weder einen signierten Android-Build noch den Test an echten Radios. Hier wird **keine fertige oder öffentlich downloadbare R4-APK** behauptet oder angeboten.
 
-Im Mittelpunkt von Version 0.4.6 stehen eine **responsive Benutzeroberfläche für unterschiedliche Smartphone-Größen im klassischen Hochformat (Barrenform)** sowie **Mehrsprachigkeit**. Die App soll sich dabei möglichst an der Android-Systemsprache orientieren; eine manuelle Sprachauswahl ist ebenfalls geplant.
+## Was VeniceRadio FS bereits im R4-Quellstand enthält
 
-**Tablet- und Querformat-Unterstützung sind optionale spätere Erweiterungen**, keine Voraussetzung für Version 0.4.6.
+- Fünf Hauptbereiche: **Live, Entdecken, Favoriten, Quelle, Einstellungen**.
+- Wiedergabeinformationen, Senderlogos soweit verfügbar, Lautstärke und Standby-Steuerung über FSAPI.
+- Navigation und Suche in den vom Radio gelieferten Senderverzeichnissen.
+- Favoriten einschließlich Kategorien, Quellenpfaden und getrennt behandelter Radiospeicher; geräteabhängige Verfügbarkeit.
+- **„Zuletzt gehört“ pro Radio**, mit bis zu sechs Einträgen; unterschiedliche Empfangsmodi und unterscheidbare Senderwege werden getrennt.
+- Sicherere Auflösung ähnlich benannter Sender; keine willkürliche Auswahl des ersten passenden Namens.
+- Quellen-/Modusbehandlung für Internetradio, DAB(+) und UKW, **sofern das jeweilige Radio diese Modi meldet**.
+- Read-only-Diagnose für unterstützte FSAPI-/WLAN-Informationen; Ergebnisgrenzen und Hinweise bei unvollständigen Abfragen.
+- DLNA-Bibliothek und Medienauswahl im bestehenden Entwicklungsstand. Die zusätzlichen Tasten zur DLNA-Wiedergabesteuerung sind **erst für R5** vorgesehen.
 
-Die Übersetzungen werden voraussichtlich schrittweise ergänzt. Welche Sprachen bereits in der ersten 0.4.6-Testversion verfügbar sind, steht noch nicht fest.
+Die Oberfläche wurde für R4 vereinheitlicht: zentrale Kachelradien von **12 dp**, einheitliche Kachelabstände, gemeinsame Grundlinien, zweizeilige Beschriftungen und konsistente Ladeanzeige. Schaltflächen und Suchfeld besitzen weiterhin eigene kleinere Radien.
 
-**[To-do und Entwicklungsplanung für 0.4.6](ROADMAP-0.4.6.md)**
+## Orientierung
 
-*Dies ist eine Ankündigung geplanter Funktionen, keine Beschreibung bereits fertiggestellter Features.*
+- [FAQ – häufige Fragen](FAQ.md)
+- [Mitmachen und Gerätetests](MITMACHEN.md)
+- [Änderungen von R3 zu R4](AENDERUNGEN-0.4.5-R3-ZU-R4.md)
+- [R4-Status und verbleibende Prüfpunkte](ROADMAP-0.4.5-R4.md)
+- [Planung 0.4.6](ROADMAP-0.4.6.md)
+- [Planung R5 / DLNA-Steuerung](ROADMAP-R5.md)
+
+## Grenzen und Sicherheit
+
+VeniceRadio FS nutzt die lokale HTTP-basierte FSAPI älterer Radios und sollte nur in einem vertrauenswürdigen Netzwerk verwendet werden. Es gibt keine direkte Anbindung an eine airable-Cloud-API und keinen eigenen Musik-Streaming-Dienst. Nicht jedes Radio unterstützt DAB, UKW, Bluetooth oder dieselben Diagnoseknoten. Es werden keine herstellerspezifischen Hardware-Workarounds eingebaut; die App orientiert sich am gemeldeten Protokollumfang.
+
+**APK-Verteilung:** Test-APKs und deren Signaturverwaltung werden getrennt vom öffentlichen Dokumentationsrepository behandelt. Hier stehen keine APK-Dateien oder geheimen Zugangsdaten.
+
+**Unabhängiges Projekt:** Keine Zugehörigkeit zu Frontier Smart Technologies, UNDOK, airable, Teufel oder anderen Herstellern.

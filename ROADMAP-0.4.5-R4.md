@@ -1,20 +1,29 @@
-# VeniceRadio FS 0.4.5 R4 – geplante Nacharbeiten
+# VeniceRadio FS 0.4.5-R4 – Implementiert und noch zu prüfen
 
-> **To-do / noch nicht umgesetzt.** Die erste Geräteprüfung von 0.4.5 R3 hat Vorrang.
+**Stand 31. Oktober 2026.** Diese Seite trennt die vorhandene R4-Implementierung von noch fehlenden Abnahmen. Sie ist **keine Behauptung eines veröffentlichten APK-Releases**.
 
-## WLAN-Diagnose
+## Im R4-Quellstand umgesetzt
 
-- [ ] Prüfen, welche **lesbaren** FSAPI-WLAN-Diagnosewerte verschiedene Radiomodelle und Firmwarestände tatsächlich liefern.
-- [ ] BSSID, Signalstärke und mögliche Repeater-Zuordnung nur dann anzeigen, wenn verlässliche Gerätedaten vorliegen.
-- [ ] Nicht unterstützte Diagnoseknoten ohne Änderung der Hauptsitzung behandeln.
-- [ ] Prüfen, ob die länger dauernde WLAN-Diagnose den vorhandenen dezenten Ladeindikator anzeigen soll.
+- [x] Einheitliche Designregeln: 12-dp-Kartenradius und Navigationsradius, zentrale Kachelabstände, konsistente Grundlinien, zweizeilige Beschriftungen und Ladezustände
+- [x] Geräterichtige Historie mit maximal sechs „Zuletzt gehört“-Sendern pro bestätigtem Radio; sichere Behandlung alter nicht zuordenbarer Verlaufseinträge
+- [x] Trennung nach Empfangsmodus und Sender-/Verzeichnisidentität, ohne Namensnormalisierung oder blindes Auswählen des ersten gleichnamigen Senders
+- [x] Prüfung des tatsächlichen Empfangsmodus vor Wiederaufruf gespeicherter Sender
+- [x] Thread-Schutz bei Favoriten, Verlauf sowie den Ansichtslisten für Entdecken
+- [x] Lesendes WLAN-Paging mit maximal acht Abfragen, höchstens 200 Einträgen, Zeitbudget und Kennzeichnung unvollständiger Resultate
+- [x] Sicherer Wiederanlauf nach nicht bestätigtem Radiospeichervorgang: Zustand zuerst lesen, keine automatische zweite Schreibaktion
+- [x] Bereinigung nicht referenzierter Codeelemente und Umzug des Java-Pakets auf `org.veniceradio.fs`; alter Launcher-Komponentenname bleibt als Kompatibilitätsalias
+- [x] Dokumentierte Java-Workflow-Prüfungen: **37 von 37 bestanden**, ergänzende Regressionstests vorhanden
 
-**Abgrenzung:** Die in 0.4.5 R3 korrigierte Deprecation-Warnung betraf ausschließlich den Java-Aufruf `URL(String)`. Sie war **keine** veraltete WLAN- oder Android-API und ist kein offener R4-Fehler.
+## Für die R4-Freigabe noch offen
 
-## DAB / DAB+
+- [ ] Signierten Android-APK-Build aus dem geprüften GitHub-Quellstand erfolgreich durchlaufen lassen, Signatur und Update über R3 prüfen
+- [ ] Sichttest und Bediengeschwindigkeit auf realen Telefonen überprüfen, einschließlich der zweizeiligen langen Sendernamen und der Kachelgrundlinien
+- [ ] WLAN-Feldnamen und tatsächliche unterstützte FSAPI-Knoten an verschiedenen Radios bestätigen
+- [ ] DAB/UKW-Menüs und Senderidentitäten an echten Geräten überprüfen
+- [ ] B5: Preset-Name und Wiedergabename anhand echter Geräteantworten abgleichen, ohne unbestätigte Schreibtests
+- [ ] Gestaltung gleichnamiger Senderkacheln über unterschiedliche Modi entscheiden, ohne zusätzliche Textzeile
+- [ ] Entscheidungen zu den bisher nicht freigegebenen DAB/UKW-Icons gesondert treffen
 
-- [ ] Eigenständiges DAB(+)-Symbol gestalten, ohne den freigegebenen Internetradio-Funkturm zu ändern.
-- [ ] Quellenumschaltung und Sendernavigation auf geeigneten DAB-/DAB+-fähigen Radios testen.
-- [ ] Geräteabhängige Unterstützung klar kennzeichnen; das Haupttestgerät besitzt keinen DAB-Empfänger.
+**Keine Hersteller-Workarounds:** Maßstab bleibt das von der Firmware tatsächlich angebotene FSAPI-Verhalten.
 
-Mehrsprachigkeit und die responsive Darstellung für klassische Smartphones im Hochformat sind separat für **0.4.6** geplant: [Roadmap 0.4.6](ROADMAP-0.4.6.md).
+Siehe [Änderungen R3 → R4](AENDERUNGEN-0.4.5-R3-ZU-R4.md), [FAQ](FAQ.md), [0.4.6](ROADMAP-0.4.6.md) und [R5](ROADMAP-R5.md).

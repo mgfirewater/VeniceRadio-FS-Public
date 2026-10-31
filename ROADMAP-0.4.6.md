@@ -1,29 +1,26 @@
-# VeniceRadio FS – Ausblick auf Version 0.4.6
+# VeniceRadio FS – Planung 0.4.6
 
-> **Planung / To-do:** Die folgenden Punkte sind angekündigte Entwicklungsziele, keine bereits verfügbaren Funktionen. Umfang und Reihenfolge können sich nach den Gerätetests noch ändern.
+> **Noch nicht für 0.4.6 implementiert oder freigegeben.** R4 ist der Stabilitäts- und Konsistenzabschluss. Der Umfang kann sich nach dem Gerätetest ändern.
 
-## Responsives Layout – Schwerpunkt Smartphone-Hochformat
+## Responsive Smartphone-Benutzeroberfläche
 
-- [ ] Die bestehende Bedienoberfläche für Smartphones in klassischer Barrenform und **Hochformat** an unterschiedliche Auflösungen und Displaygrößen anpassen.
-- [ ] Kachelraster, sichtbare Einträge, Abstände und Schriftlängen an den verfügbaren Platz anpassen, ohne die bestehenden Designregeln (gemeinsame Grundlinien, konsistente Auswahllinien, feste Bedienelemente) aufzugeben.
-- [ ] Unterschiedliche Smartphone-Bildschirmgrößen im Hochformat gezielt testen.
-
-### Optional – spätere Erweiterungen, nicht Voraussetzung für 0.4.6
-
-- [ ] Tablet-Darstellung prüfen und bei Bedarf ergänzen.
-- [ ] Querformat (Landscape/Wide-Mode) bei Bedarf mit angepasster Anordnung der Kacheln und Bedienelemente unterstützen.
+- [ ] Entdecken-Kachelraster und Seitenmenge aus tatsächlich verfügbarer Displayhöhe bestimmen, statt einen festen Wert auf alle Smartphones anzuwenden
+- [ ] Auf dem Referenz-Smartphone im Hochformat nach Möglichkeit neun vollständige Zweispaltenzeilen zeigen; auf anderen Geräten eine passende Zahl ohne abgeschnittene Zeilen
+- [ ] Suchfeld, Breadcrumb und Seitennavigation stabil halten; keine verschobenen Grundlinien, keine abweichenden Radien oder ungleichen Abstände
+- [ ] Letzte Suche, Verzeichnisweg und Seite beim Ansichtswechsel erhalten; keine unnötigen FSAPI-Abfragen
+- [ ] Unterschiedliche Systemschriftgrößen und Bildschirmauflösungen testen
 
 ## Mehrsprachigkeit
 
-- [ ] Die Benutzeroberfläche schrittweise für mehrere Sprachen vorbereiten.
-- [ ] Standardmäßig die **Android-Systemsprache** verwenden, sofern eine Übersetzung vorhanden ist.
-- [ ] Unter **Einstellungen → Sprache** eine optionale manuelle Sprachwahl vorsehen.
-- [ ] UI-Texte, Dialoge, Status- und Fehlermeldungen in übersetzbare Android-Ressourcen auslagern.
-- [ ] Bei nicht unterstützter Systemsprache auf eine verfügbare Standardsprache zurückfallen.
-- [ ] Längere übersetzte Beschriftungen im responsiven Layout berücksichtigen; Namen und Metadaten, die das Radio liefert, nicht künstlich übersetzen.
+- [ ] Texte in übersetzbare Android-Ressourcen übernehmen
+- [ ] Systemsprache verwenden, sofern eine Übersetzung vorliegt; optionale manuelle Sprachwahl
+- [ ] Fallback-Sprache bei fehlender Übersetzung vorsehen
+- [ ] Radioseitig gelieferte Sendernamen und Metadaten unverändert lassen
+- [ ] Übersetzte längere Beschriftungen im adaptiven Layout prüfen
 
-**Hinweis:** Welche Sprachen bereits mit der ersten Version 0.4.6 verfügbar sein werden, steht noch nicht fest. Die Übersetzungen können schrittweise ergänzt werden.
+## Spätere optionale Darstellungen
 
-## Abgrenzung
+- [ ] Tablet-Layout
+- [ ] Querformat/Wide-Mode
 
-Die Arbeiten an Version 0.4.5 R3 einschließlich ihrer Geräte- und Regressionstests werden separat abgeschlossen. Die hier aufgeführten Funktionen sind **noch nicht implementiert oder freigegeben**.
+**Abgrenzung:** Neue DLNA-Pause-/Weiter-/Zurück-Steuerung ist für [R5](ROADMAP-R5.md) vorgesehen. Sie gehört nicht automatisch zu 0.4.6. [R4-Status](ROADMAP-0.4.5-R4.md).
